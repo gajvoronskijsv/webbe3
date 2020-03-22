@@ -53,5 +53,5 @@ if($_POST['sendform'] == 'Отправить'){
 	}
 }
 
-header('Location: /git/index.html');
+header('Location: /webbe3/index.html');
 ?>
