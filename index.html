@@ -111,7 +111,7 @@
       
       <div class="form" id=form>
       <h2><b>Форма</b></h2>  
-      <form action="http://example.com" method="POST">
+      <form target=_blank action="script.php" method="POST">
         <label><b>Имя</b><br /><input name="username" ></label><br />
         <label><b>E-mail</b><br /><input name="email" type="email" ></label><br />
         <!-- В следующем задании при использовании type="date" валидатор предупреждает, что этот тип не поддерживается всеми браузерами,поэтому импользовал type="text" -->
@@ -136,8 +136,8 @@
         <label><b>Биография</b><br />
           <textarea name="biography"></textarea>
         </label><br />
-        <label><input type="checkbox"><b>С контрактом ознакомлен(а)</b></label><br />
-        <input type="submit" value="Отправить"><br />
+        <label><input name="checkbox" type="checkbox" value="check"><b>С контрактом ознакомлен(а)</b></label><br />
+        <input class="submit" name="sendform" type="submit" value="Отправить"><br />
       </form>
       </div>
     </div>
