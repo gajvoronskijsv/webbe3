@@ -45,6 +45,7 @@ if($_POST['sendform'] == 'Отправить'){
 		$stmt->bindParam(':message', $message);
 		$stmt->execute();
 		print('Форма заполнена корректно');
+		exit();
 	}
 	catch(PDOException $e){
 		print('Error : ' . $e->getMessage());
@@ -52,5 +53,5 @@ if($_POST['sendform'] == 'Отправить'){
 	}
 }
 
-header('Location: /web3');
+header('Location: /git/index.html');
 ?>
