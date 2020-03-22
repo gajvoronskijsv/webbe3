@@ -1,0 +1,130 @@
+body {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: sans-serif;
+  background-color: lightsteelblue;
+}
+
+.mobilefirst{
+  width:100%; 
+}
+
+header{
+  font-family: sans-serif;
+  background-color:#414450;
+  width:100%;
+  border-bottom:1px solid  darkorange;
+}
+
+.header{
+  margin: 0 auto;
+  clear: both;
+  color: darkorange ;
+  height: 100px;
+  display: flex;
+  align-items:  center ;
+}
+
+header div.header h1{
+  margin: 0;
+  font-size: 30px;
+  color: darkorange;
+}
+
+#logo{
+  float: left;
+  margin-right: 20px;
+
+}
+
+.nav {
+  margin: 0 auto;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  background-color: #414450;
+  border-radius: 2px;
+}
+
+.nav a {
+  color: #aaa;
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.content{
+  margin: 0 auto;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+}
+
+.list{
+  order:1;
+}
+
+.table{
+  order:3;
+}
+
+.table table{
+  border-collapse: collapse;
+}
+
+.table table tr,th,td{
+  border: 3px solid #414450;
+  padding: 9px;
+}
+.table table tr:nth-child(odd){
+  background-color:  aliceblue;
+}
+
+.table table tr:nth-child(even){
+  background-color:  #aaa;
+}
+
+.form{
+  order:2;
+}
+
+footer{
+  font-family: sans-serif;
+  background-color:#414450;
+  height: 100px;
+  border-top :1px solid  darkorange;
+}
+
+.footer{
+  clear: both;
+  height: 100px;
+}
+
+footer div.footer span{
+  font-size: 30px;
+  color: darkorange;
+}
+
+@media screen and (min-width: 480px) and (orientation: landscape) {
+  .mobilefirst{
+    max-width: 960px;
+  }
+
+  .nav {
+    flex-direction: row;
+  }
+  .list{
+    order:1;
+  }
+
+  .table{
+    order:2;
+  }
+
+  .form{
+    order:3;
+  }
+
+}

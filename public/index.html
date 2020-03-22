@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang=ru>
+  <head>
+    <meta charset="utf-8">
+    <title>WEB III</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <header>
+        <div class="header mobilefirst">
+          <img id="logo"
+            src="logo.jpg" 
+            alt="Black_hole" 
+            title="Black_hole">
+          <h1>WEB III</h1>
+        </div>
+    </header>
+    
+    <nav>
+      <div class="nav mobilefirst">
+        <a href="#content"> Контент </a>
+        <a href="#table"> Таблица </a>
+        <a href="#form"> Форма </a>
+      </div>
+    </nav>
+    
+    <div class="content mobilefirst" id=content> 
+      <div class="list">
+      <a id=anchor></a>
+      <ol>
+        <li> <a href="http://example.com">Абсолютная гиперссылка на главную страницу сайта example.com</a> </li>
+        <li> <a href="https://example.com">Абсолютная ссылка на главную сайта example.com в протоколе https</a> </li>
+        <li> <a href="ftp://example.com/index.html">Ссылка на файл на сервере FTP без авторизации</a> </li>
+        <li> <a href="ftp://login:password@example.com/index.html">Ссылка на файл на сервере FTP с авторизацией</a> </li>
+        <li> <a href="http://example.com#anchor">Ссылка на фрагмент страницы некоторого сайта</a> </li>
+        <li> <a href="#anchor">Ссылка на фрагмент текущей страницы</a> </li>
+        <li> <a href="http://example.com?a=b&c=d">Ссылка с двумя параметрами в URL</a> </li>
+        <li>
+            <p> Список ссылок основной навигации сайта с подписями </p>
+            <ul>
+            <li> <a title="переход на главную страницу"> Домой </a> </li>
+            <li> <a href="/page1" title="переход на первую страницу"> Страница 1 </a> </li>
+            <li> <a href="/page2" title="переход на вторую страницу"> Страница 2 </a> </li>
+            </ul>
+          <p></p>
+          </li>
+        <li> <a> ссылку без href </a> </li>
+        <li> <a href=""> ссылку с пустым href </a> </li>
+        <li> <a href="http://example.com" rel="nofollow"> ссылку, по которой запрещен переход поисковикам </a> </li>
+        <li> <a href="http://example.com" rel="nofollow"><!-- noindex --> запрещенную для индексации поисковиками<!-- /noindex --> </a> </li>
+        <li> <p><a href="https://en.wikipedia.org/wiki/Context_(language_use)"> контекстную</a> в тексте абзаца</p> </li>
+        <li> <a href="https://en.wikipedia.org/wiki/Black_hole" >
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg/260px-Black_hole_-_Messier_87_crop_max_res.jpg" 
+                    width="260" 
+                    height="260" 
+                    alt="Black_hole" 
+                    title="Black_hole"> 
+             </a>
+        </li>
+        <li> 
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pale_Blue_Dot.png/333px-Pale_Blue_Dot.png" 
+               width="333" 
+               height="451"
+               alt="Pale_Blue_Dot"
+               title="Pale_Blue_Dot" 
+               usemap="#map">
+          <map name="map"> 
+            <area shape="circle" coords="252,252,10" href="https://en.wikipedia.org/wiki/Earth" title="Earth" alt="Earth">
+            <area shape="rect" coords="60,120,150,300" href="https://en.wikipedia.org/wiki/Halo_(optical_phenomenon)" title="Halo" alt="Halo">
+          </map>
+        </li>
+        <li><a href="page">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <!-- следующее задание интерпретировал как: /catalog/ -> /catalog/about/page -->
+        <li><a href="about/page">Относительная ссылка на страницу в каталоге about</a></li>
+        <li><a href="../page">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+        <li><a href="../../page">Относительная ссылка на страницу в каталоге двумя уровнями выше текущего</a></li>
+        <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+        <li><a href="/page">Сокращенная ссылка на внутреннюю страницу сайта</a></li>
+      </ol>
+      </div>
+
+      <div class="table" id=table>
+        <table>
+          <tr>
+            <th>Колонка 1</th>
+            <th>Колонка 2</th>
+            <th>Колонка 3</th>
+          </tr>
+          <tr>
+            <td>Ячейка</td>
+            <td>Ячейка</td>
+            <td>Ячейка</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Вертикальная ячейка</td>
+            <td colspan="2">Горизонтальная ячейка</td>
+          </tr>
+          <tr>
+            <td>Ячейка</td>
+            <td rowspan="2">Вертикальная ячейка</td>
+          </tr>
+          <tr>
+            <td colspan="2">Горизонтальная ячейка</td>
+          </tr>
+          <tr>
+            <td colspan="3">Очень горизонтальная ячейка</td>
+          </tr>
+        </table>  
+      </div>  
+      
+      <div class="form" id=form>
+      <h2><b>Форма</b></h2>  
+      <form action="http://example.com" method="POST">
+        <label><b>Имя</b><br /><input name="username" ></label><br />
+        <label><b>E-mail</b><br /><input name="email" type="email" ></label><br />
+        <!-- В следующем задании при использовании type="date" валидатор предупреждает, что этот тип не поддерживается всеми браузерами,поэтому импользовал type="text" -->
+        <label><b>Дата рождения</b><br /><input name="birthdate" type="text"></label><br />
+        <b>Пол</b><br />
+          <label><input type="radio" name ="sex" value="s1">Мужской</label><br />
+          <label><input type="radio" name ="sex" value="s2">Женский</label><br />
+        <b>Количество конечностей</b><br />
+          <label><input type="radio" name ="limbs" value="l1">Одна</label><br />
+          <label><input type="radio" name ="limbs" value="l2">Две</label><br />
+          <label><input type="radio" name ="limbs" value="l3">Три</label><br />
+          <label><input type="radio" name ="limbs" value="l4" checked>Четыре</label><br />
+          <label><input type="radio" name ="limbs" value="l5">Более четырех</label><br />
+        <label>
+          <b>Сверхспособности</b><br />
+          <select multiple name="superpower">
+            <option disabled>Выберите способность</option>
+            <option value="sp1">Бессмертие</option>
+            <option value="sp2">Прохождение сквозь стены</option>
+            <option value="sp3">Левитация</option></select>
+        </label><br />
+        <label><b>Биография</b><br />
+          <textarea name="biography"></textarea>
+        </label><br />
+        <label><input type="checkbox"><b>С контрактом ознакомлен(а)</b></label><br />
+        <input type="submit" value="Отправить"><br />
+      </form>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="footer mobilefirst" id=footer>
+        <span>(с) Гайворонский С.В. 2077</span>
+      </div>
+    </footer>
+
+  </body>
+</html>
